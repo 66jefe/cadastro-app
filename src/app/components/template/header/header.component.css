@@ -1,0 +1,15 @@
+.header {
+    background-color: rgb(36, 34, 31);
+    justify-content: center;
+    height: 10%;
+}
+
+h1 {
+    color: white;
+    font-size: 25px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
