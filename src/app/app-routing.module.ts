@@ -1,3 +1,4 @@
+import { PessoaDeleteComponent } from './components/views/pessoa/pessoa-delete/pessoa-delete.component';
 import { PessoaCreateComponent } from './components/views/pessoa/pessoa-create/pessoa-create.component';
 import { PessoaReadComponent } from './components/views/pessoa/pessoa-read/pessoa-read.component';
 import { HomeComponent } from './components/views/home/home.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'listar/create',
     component: PessoaCreateComponent
+  },
+  {
+    path: 'listar/delete/:id',
+    component: PessoaDeleteComponent
   }
 ];
 

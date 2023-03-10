@@ -32,4 +32,8 @@ export class PessoaCreateComponent implements OnInit {
     });
   }
 
+  cancel(): void {
+    this.router.navigate(['listar']);
+  }
+
 }
