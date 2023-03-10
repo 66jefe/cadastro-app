@@ -2,8 +2,9 @@
     <div class="title">
         <h1>Pessoas</h1>
     </div>
+    <button class="mat-elevation-z8" (click)="navCatCreate()" mat-raised-button color="primary">Cadastrar nova pessoa</button>
     <div class="mat-elevation-z8 content-table">
-        <table class="table" mat-table>
+        <table class="table" mat-table [dataSource]="pessoas">
             <!-- Id Column -->
             <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -39,8 +40,15 @@
             </ng-container>
               <!-- Ações Column -->
             <ng-container matColumnDef="acoes">
-                <th mat-header-cell *matHeaderCellDef> Ações </th>
-                <td mat-cell *matCellDef="let row"></td>
+                <th class="mat-header" mat-header-cell *matHeaderCellDef> Ações </th>
+                <td mat-cell *matCellDef="let row">
+                  <a href="#" class="edit">
+                    <i class="material-icons">edit</i>
+                  </a>
+                  <a href="#" class="delete">
+                    <i class="material-icons">delete</i>
+                  </a>
+                </td>
             </ng-container>
         
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

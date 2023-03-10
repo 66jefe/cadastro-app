@@ -1,3 +1,4 @@
+import { PessoaCreateComponent } from './components/views/pessoa/pessoa-create/pessoa-create.component';
 import { PessoaReadComponent } from './components/views/pessoa/pessoa-read/pessoa-read.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'listar',
     component: PessoaReadComponent
+  }, 
+  {
+    path: 'listar/create',
+    component: PessoaCreateComponent
   }
 ];
 

@@ -1,6 +1,7 @@
 import { PessoaService } from './../pessoa.service';
 import { Component, OnInit } from '@angular/core';
 import { Pessoa } from '../pessoa.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pessoa-read',
@@ -13,7 +14,7 @@ export class PessoaReadComponent implements OnInit {
   
   displayedColumns: string[] = ['id', 'nome', 'idade', 'cpf', 'sexo', 'telefone', 'acoes'];
 
-  constructor(private service: PessoaService) { }
+  constructor(private service: PessoaService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -24,6 +25,10 @@ export class PessoaReadComponent implements OnInit {
       console.log(resposta);
       this.pessoas = resposta;
     });
+  }
+
+  navCatCreate() {
+    this.router.navigate(["listar/create"]);
   }
 
 }
