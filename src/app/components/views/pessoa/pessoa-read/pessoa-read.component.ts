@@ -22,7 +22,6 @@ export class PessoaReadComponent implements OnInit {
 
   findAll() {
     this.service.findAll().subscribe(resposta => {
-      console.log(resposta);
       this.pessoas = resposta;
     });
   }

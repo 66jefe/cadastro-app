@@ -19,9 +19,18 @@ export class PessoaService {
     return this.http.get<Pessoa[]>(url);
   }
 
+  findById(id: String): Observable<Pessoa> {
+    const url = `${this.baseUrl}/listar/${id}`;
+    return this.http.get<Pessoa>(url);
+  }
   create(pessoa: Pessoa): Observable<Pessoa>{
     const url = `${this.baseUrl}/cadastrar`;
     return this.http.post<Pessoa>(url, pessoa);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/remover/${id}`;
+    return this.http.delete<void>(url);
   }
 
   msg(str: String): void {

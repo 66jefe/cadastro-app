@@ -2,26 +2,26 @@
     <h1>Deletando pessoa</h1>
     <mat-form-field class="form">
         <mat-label>Nome</mat-label>
-        <input matInput type="text" name="nome" disabled>
+        <input matInput [(ngModel)]="pessoa.nome" type="text" name="nome" disabled>
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Idade</mat-label>
-        <input matInput type="text" name="idade" disabled>
+        <input matInput [(ngModel)]="pessoa.idade" type="text" name="idade" disabled>
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>CPF</mat-label>
-        <input matInput type="text" name="cpf" disabled>
+        <input matInput [(ngModel)]="pessoa.cpf" type="text" name="cpf" disabled>
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Sexo</mat-label>
-        <input matInput type="text" name="sexo" disabled>
+        <input matInput [(ngModel)]="pessoa.sexo" type="text" name="sexo" disabled>
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Telefone</mat-label>
-        <input matInput type="text" name="telefone" disabled>
+        <input matInput [(ngModel)]="pessoa.telefone" type="text" name="telefone" disabled>
     </mat-form-field>
     <div class="buttons">
-        <button class="mat-elevation-z8" mat-raised-button color="primary">Deletar</button>
-        <button class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+        <button (click)="delete()" class="mat-elevation-z8" mat-raised-button color="primary">Deletar</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
     </div>
 </form>
