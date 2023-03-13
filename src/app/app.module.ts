@@ -23,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PessoaDeleteComponent } from './components/views/pessoa/pessoa-delete/pessoa-delete.component';
+import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/pessoa-update.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PessoaDeleteComponent } from './components/views/pessoa/pessoa-delete/p
     HomeComponent,
     PessoaReadComponent,
     PessoaCreateComponent,
-    PessoaDeleteComponent
+    PessoaDeleteComponent,
+    PessoaUpdateComponent
   ],
   imports: [
     BrowserModule,

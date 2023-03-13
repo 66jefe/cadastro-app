@@ -33,6 +33,11 @@ export class PessoaService {
     return this.http.delete<void>(url);
   }
 
+  update(pessoa: Pessoa): Observable<void> {
+    const url = `${this.baseUrl}/alterar/${pessoa.id}`;
+    return this.http.put<void>(url, pessoa);
+  }
+
   msg(str: String): void {
     this._snack.open(`${str}`, 'Ok', {
       horizontalPosition: 'end',

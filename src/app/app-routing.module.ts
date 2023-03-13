@@ -1,3 +1,4 @@
+import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/pessoa-update.component';
 import { PessoaDeleteComponent } from './components/views/pessoa/pessoa-delete/pessoa-delete.component';
 import { PessoaCreateComponent } from './components/views/pessoa/pessoa-create/pessoa-create.component';
 import { PessoaReadComponent } from './components/views/pessoa/pessoa-read/pessoa-read.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'listar/delete/:id',
     component: PessoaDeleteComponent
+  },
+  {
+    path: 'listar/update/:id',
+    component: PessoaUpdateComponent
   }
 ];
 
